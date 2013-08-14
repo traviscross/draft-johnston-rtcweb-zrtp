@@ -237,8 +237,6 @@ In order to provide protection against a MitM attack of WebRTC media sessions, Z
 </list>
 </t>
 <t>
-Note that simply verifying the SAS is not enough.  This is to protect against a situation where the MitM attacker attacks the DTLS session but not the ZRTP session.
-</t><t>
 The ZRTP auxsecret is defined in Section 4.3 of <xref target="RFC6189" />. This specification defines the following new policies relating to the usage of auxsecret when ZRTP is used to secure DTLS-SRTP media sessions.
 </t>
 <t>
