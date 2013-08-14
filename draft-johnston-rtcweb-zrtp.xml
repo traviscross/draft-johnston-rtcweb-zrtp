@@ -259,9 +259,9 @@ Any failure in the ZRTP exchange MUST be treated as a MitM attack.
 Detection of a MitM attack MUST result in the closure of the DTLS-SRTP sessions and alerting the browser users.
 </t>
 <t>
-If the users successfully compare the SAS strings, it means that neither the DTLS or ZRTP sessions have MitM attackers.  Any media sessions which were established using this same pair of local and remote fingerprints also do not have MitM attackers, regardless of which browser tab or window they are present in.</t>
+If the users successfully compare the SAS strings, it means that neither the DTLS nor the ZRTP sessions have MitM attackers.  Any media sessions which were established using this same pair of local and remote fingerprints also do not have MitM attackers, regardless of which browser tab or window they are present in.</t>
 <t>
-This specification requires DTLS utilize a Forward Secrecy (FS) mode.  If a FS mode is not available, the DTLS connection MUST fail.
+This specification requires DTLS to use a Forward Secrecy (FS) mode.  If a FS mode is not available, the DTLS connection MUST fail.
 </t>
 </section>
 
