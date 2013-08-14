@@ -240,7 +240,7 @@ In order to provide protection against a MitM attack of WebRTC media sessions, Z
 The ZRTP auxsecret is defined in Section 4.3 of <xref target="RFC6189" />. This specification defines the following new policies relating to the usage of auxsecret when ZRTP is used to secure DTLS-SRTP media sessions.
 </t>
 <t>
-The auxsecret MUST be used.   The auxsecret is truncated to 256 bits of:
+The auxsecret MUST be used.  The auxsecret is truncated to 256 bits of:
 </t>
 <t>
 <figure><artwork><![CDATA[
