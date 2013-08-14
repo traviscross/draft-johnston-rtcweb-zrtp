@@ -251,7 +251,7 @@ The auxsecret MUST be used.  The auxsecret is truncated to 256 bits of:
 <t>
 Note that this auxsecret is actually not a secret, since the fingerprints are hashes of known public keys used by the browsers.  This does not affect the security of ZRTP.
 </t>
-<t>If the auxsecrets of the initiator and responder do not match, this MUST be treated as a MitM attack.  This is to protect against the case where the DTLS-SRTP session has an MitM attacker but the ZRTP session does not.  Note that this can be done as soon as the DHPart1 and DHPart2 messages have been exchanged and can be done automatically without calculating the SAS.</t>
+<t>If the auxsecrets of the initiator and responder do not match, this MUST be treated as a MitM attack.  This is to protect against the case where the DTLS-SRTP session has an MitM attacker but the ZRTP session does not.  Note that this can be done as soon as the DHPart1 and DHPart2 messages have been exchanged and can be done automatically without calculating or comparing the SAS.</t>
 <t>
 Any failure in the ZRTP exchange MUST be treated as a MitM attack.
 </t>
