@@ -1,0 +1,12 @@
+# gitignore
+/*.txt
+/*.html
+/*.nr
+/*.epub
+/*.pdf
+/*.ps
+/*.fo
+/*.fop
+/*.exp.xml
+/*.tar
+/*.tar.*

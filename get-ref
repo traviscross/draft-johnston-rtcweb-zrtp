@@ -1,0 +1,41 @@
+#!/bin/bash
+
+type="$1"
+ref="$2"
+
+if [ $# -lt 2 ]; then
+  echo "usage: $0 type ref"
+  exit 1
+fi
+
+burl="http://xml.resource.org/public/rfc/bibxml2/"
+pfx="reference"
+case "$type" in
+  rfc)
+    burl="http://xml.resource.org/public/rfc/bibxml/"
+    doc="${pfx}.RFC.${ref}.xml"
+    ;;
+  i-d)
+    burl="http://xml.resource.org/public/rfc/bibxml3/"
+    doc="${pfx}.I-D.${ref}.xml"
+    ;;
+  w3c)
+    burl="http://xml.resource.org/public/rfc/bibxml4/"
+    doc="${pfx}.W3C.${ref}.xml"
+    ;;
+  jsf)
+    burl="http://www.xmpp.org/extensions/refs/"
+    doc="${pfx}.XSF.XEP-${ref}.xml"
+    ;;
+  3gpp)
+    burl="http://xml.resource.org/public/rfc/bibxml5/"
+    doc="${pfx}.3GPP.${ref}.xml"
+    ;;
+  misc)
+    burl="http://xml.resource.org/public/rfc/bibxml2/"
+    doc="${pfx}.${ref}.xml"
+    ;;
+esac
+
+wget -N $burl/$doc
+
