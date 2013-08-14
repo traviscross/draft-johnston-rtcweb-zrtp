@@ -245,7 +245,7 @@ The auxsecret MUST be used.  The auxsecret is truncated to 256 bits of:
 <t>
 <figure><artwork><![CDATA[
      auxsecret = hash(initiator's DTLS-SRTP fingerprint ||
-                         || responder's DTLS-SRTP fingerprint)
+                      responder's DTLS-SRTP fingerprint)
 ]]></artwork></figure>
 </t>
 <t>
