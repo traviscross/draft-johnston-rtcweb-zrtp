@@ -302,7 +302,7 @@ If the MitM attacks just the media channel, after the exchange of DHPart1 and DH
 If the MitM attacks just the data channel, the SAS as computed by each browser will be different as two independent DH exchanges occurred.  The MitM will be detected by ZRTP's SAS or by the break in key continuity.  Note that it doesn't make much sense for the MitM to attack just the data channel, but this could happen.
 </t>
 <t>
-If the MitM attacks neither the media nor the data channel, the auxsecrets will match and the SAS as computed by each browser will be the same.  As a result, both the ZRTP and media session are free of MitM attackers.
+If the MitM attacks neither the media nor the data channel, the auxsecrets will match, the SAS as computed by each browser will be the same, and key continuity will be maintained.  As a result, both the ZRTP and media session are free of MitM attackers.
 </t>
 <t>
 Note that only in one scenario does this approach rely on the users comparing the SAS.  Also, note that all these attacks rely on the attacker being able to insert themselves in the path as a MitM.  For the scenario in which the media channel and data channel use different DTLS connections, it could be potentially difficult for the attacker to insert themselves as a MitM in the data channel as it could take a complete different route over the Internet from the media channel.  For example, the data channel used by ZRTP could be deliberately routed over a different IP connection or via a TURN server forcing a different path that may not accessible to the attacker.
