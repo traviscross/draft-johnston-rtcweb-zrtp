@@ -1,5 +1,5 @@
 #### -*- mode:makefile -*-
-## Build-Depends: wget, xml2rfc, enscript, ghostscript, calibre, wkhtmltopdf, libsaxon-java, fop
+## Build-Depends: xml2rfc, enscript, ghostscript, calibre, wkhtmltopdf, libsaxon-java, fop
 
 NAME=draft-johnston-rtcweb-zrtp
 OUTPUTS=$(NAME).txt $(NAME).html $(NAME).nr $(NAME).txt.pdf $(NAME).html.epub $(NAME).xslt.pdf
@@ -14,9 +14,6 @@ bundle: $(NAME).tar.gz
 
 clean:
 	rm -f *.txt *.html *.nr *.ps *.pdf *.epub *.exp.xml *.fo *.fop *.tar.gz
-
-fetch:
-	wget -N http://zfone.com/docs/ietf/$(NAME).xml
 
 $(NAME).tar.gz: $(OUTPUTS)
 	mkdir -p $(NAME)
