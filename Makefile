@@ -1,5 +1,7 @@
 # makefile
 
+# Build-Depends: wget, xml2rfc, enscript, ghostscript, calibre, wkhtmltopdf, libsaxon-java, fop
+
 NAME=draft-johnston-rtcweb-zrtp
 OUTPUTS=$(NAME).txt $(NAME).html $(NAME).nr $(NAME).txt.pdf $(NAME).html.epub $(NAME).xslt.pdf
 
