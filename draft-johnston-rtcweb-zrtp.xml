@@ -245,8 +245,12 @@ The auxsecret MUST be used.  The auxsecret is truncated to 256 bits of:
 <t>
 <figure><artwork><![CDATA[
      auxsecret = hash(initiator's DTLS-SRTP fingerprint ||
-                      responder's DTLS-SRTP fingerprint)
+                      responder's DTLS-SRTP fingerprint ||
+                      original_auxsecret)
 ]]></artwork></figure>
+</t>
+<t>
+The original_auxsecret is any auxsecret value that would otherwise have been used with ZRTP, or the null string if no such value exists as will ordinarily be the case.
 </t>
 <t>
 Note that this auxsecret is actually not a secret, since the fingerprints are hashes of known public keys used by the browsers.  This does not affect the security of ZRTP.
